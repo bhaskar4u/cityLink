@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const vendorSchema = new mongoose.Schema({
+    userId: {
+        type: String,
+        required: true
+    },
     driverName: {
         type: String,
         required: true

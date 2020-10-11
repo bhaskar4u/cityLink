@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const Cors = require('cors')
+const bodyParser = require('body-parser')
 
 const ApiRoutes = require('./routes/index')
 const connectDB = require('./config/db')
@@ -14,7 +15,7 @@ if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(ApiRoutes)
 
 

@@ -9,10 +9,11 @@ const bookingSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    source: {
+    source:
+    {
         name: {
             type: String,
-            required: true
+
         },
         address: {
             address: {
@@ -44,6 +45,7 @@ const bookingSchema = new mongoose.Schema({
 
         }
     }
+
     ,
     status: {
         type: Boolean,
@@ -71,10 +73,11 @@ const bookingSchema = new mongoose.Schema({
         }
     },
     vendor: {
-        id: 18567,
-        fullName: "Ram",
-        vehicleNumber: "KA01AB9876",
-        vehicleModel: "Tata Ace"
+        id: { type: String },
+        fullName: { type: String },
+        vehicleMake: { type: String },
+        vehicleNumber: { type: String },
+        vehicleModel: { type: String }
     },
     bookingTime: { type: Date },
     pickupTime: { type: Date }
